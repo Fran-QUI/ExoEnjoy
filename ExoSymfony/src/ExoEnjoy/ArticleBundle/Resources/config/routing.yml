@@ -1,0 +1,20 @@
+# the main page of the app is $url/index
+
+exo_enjoy_article_indexpage:
+    path:     /index
+    defaults: { _controller: ExoEnjoyArticleBundle:Articles:index}
+
+# the root url, redirect to the index.
+
+exo_enjoy_article_homepage:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /index
+        permanent: true
+
+# the article url is $url/article/{id of the article}
+
+exo_enjoy_article_articlepage:
+    path:     /article/{id}
+    defaults: { _controller: ExoEnjoyArticleBundle:Articles:view}

@@ -1,0 +1,4 @@
+services:
+#    exo_enjoy_article.example:
+#        class: ExoEnjoy\ArticleBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

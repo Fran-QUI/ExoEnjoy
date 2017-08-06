@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Bienvenue sur l'exercice de EnjoyYourBusiness</title>
+
+    </head>
+
+    {% block stylesheets %}
+        {# My personal stylsheet #}
+        <link href="{{ asset('/bundles/exoenjoyarticle/style.css') }}" rel="stylesheet" />
+        {# A google font : Indie Flower
+        for css code : font-family: 'Indie Flower', cursive; #}
+        <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    {% endblock %}
+
+    <body>
+
+        <h1>Index des articles</h1>
+
+        <ul>
+            {#Browse the listArticles array generated with the controller...#}
+            {% for article in listArticles %}
+                {# ...and show each article title and date
+                and generate link to article view#}
+                <li><a href="{{ path('exo_enjoy_article_articlepage', {'id': article.id}) }}">{{ article.title }}</a> ({{ article.creationDate|date('d/m/Y') }}) </li>
+            {% endfor %}
+        </ul>
+
+    </body>
+
+</html>

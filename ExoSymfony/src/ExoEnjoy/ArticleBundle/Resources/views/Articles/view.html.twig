@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+
+        <title>Bienvenue dans l'article {{ article.id }}</title>
+
+
+
+        {% block stylesheets %}
+            {# My personal stylsheet #}
+            <link href="{{ asset('/bundles/exoenjoyarticle/style.css') }}" rel="stylesheet" />
+            {# A google font : Indie Flower
+            for css code : font-family: 'Indie Flower', cursive; #}
+            <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+        {% endblock %}
+
+    </head>
+
+    <body>
+
+    {# "article" is an array generated with the controller,
+    it contain all informations for the article with the id entered at the end of the url #}
+
+        <h1>{{ article.title }}</h1>
+
+
+            <div class="articleContent"> <p>{{ article.content }}</p> </div>
+            <div class="date">{{ article.creationDate|date('d/m/Y') }}</div>
+
+        <div class="btn">
+            <a href="{{ path('exo_enjoy_article_indexpage') }}">Retour à l'index</a>
+        </div>
+
+
+    </body>
+
+</html>

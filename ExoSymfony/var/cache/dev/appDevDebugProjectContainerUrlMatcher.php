@@ -108,6 +108,25 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // exo_enjoy_article_indexpage
+        if ('/index' === $pathinfo) {
+            return array (  '_controller' => 'ExoEnjoy\\ArticleBundle\\Controller\\ArticlesController::indexAction',  '_route' => 'exo_enjoy_article_indexpage',);
+        }
+
+        // exo_enjoy_article_homepage
+        if ('' === $trimmedPathinfo) {
+            if (substr($pathinfo, -1) !== '/') {
+                return $this->redirect($pathinfo.'/', 'exo_enjoy_article_homepage');
+            }
+
+            return array (  '_controller' => 'Symfony\\Bundle\\FrameworkBundle\\Controller\\RedirectController::urlRedirectAction',  'path' => '/index',  'permanent' => true,  '_route' => 'exo_enjoy_article_homepage',);
+        }
+
+        // exo_enjoy_article_articlepage
+        if (0 === strpos($pathinfo, '/article') && preg_match('#^/article/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+            return $this->mergeDefaults(array_replace($matches, array('_route' => 'exo_enjoy_article_articlepage')), array (  '_controller' => 'ExoEnjoy\\ArticleBundle\\Controller\\ArticlesController::viewAction',));
+        }
+
         // homepage
         if ('' === $trimmedPathinfo) {
             if (substr($pathinfo, -1) !== '/') {

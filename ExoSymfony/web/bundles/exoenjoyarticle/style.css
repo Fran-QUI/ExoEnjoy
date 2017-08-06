@@ -1,0 +1,102 @@
+/* style.css created by fquivron for ExoEnjoy */
+
+/*
+i Use google font :
+<link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+font-family: 'Indie Flower', cursive;
+ */
+
+/* after modification run command : php bin/console assets:install
+    it install asset in public directory.
+ */
+
+
+body {
+    width: auto;
+    margin: 5%;
+    background-color: #000000;
+    font-family: 'Indie Flower', cursive;
+
+}
+
+h1 {
+    font-size: 2em;
+    color: #cc2244;
+    margin: auto;
+    text-align: center;
+
+}
+
+p {
+    font-size: 1.2em;
+    color: #3333CC;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: #CC7832;
+    margin: 5px;
+}
+
+a:visited {
+    color: #cc2244;
+}
+
+.btn {
+    background: #222222;
+    background-image: -webkit-linear-gradient(top, #222222, #2985b9);
+    background-image: -moz-linear-gradient(top, #222222, #2985b9);
+    background-image: -ms-linear-gradient(top, #222222, #2985b9);
+    background-image: -o-linear-gradient(top, #222222, #2985b9);
+    background-image: linear-gradient(to bottom, #222222, #2985b9);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    color: #ffffff;
+    font-size: 25px;
+    font-stretch: expanded;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background: #3cb0fd;
+    background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+    background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+    text-decoration: none;
+}
+
+.date {
+    color: #A46A1F;
+    padding-left: 70%;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.articleContent p {
+    color: #262626;
+    margin : 20px;
+    padding : 4%;
+
+    border:hidden 7px #cccccc;
+    -moz-border-radius-topleft: 10px;
+    -moz-border-radius-topright:5px;
+    -moz-border-radius-bottomleft:5px;
+    -moz-border-radius-bottomright:23px;
+    -webkit-border-top-left-radius:10px;
+    -webkit-border-top-right-radius:5px;
+    -webkit-border-bottom-left-radius:5px;
+    -webkit-border-bottom-right-radius:23px;
+    border-top-left-radius:10px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:23px;
+    background-color: #3498db;
+
+}
